@@ -2,19 +2,22 @@
   "name": "test1",
   "version": "1.0.0",
   "description": "GIT / NODE / MONGO / REACT(STRAP) / PASSPORT",
-  "repository" :
-  { "type" : "git"
-  , "url" : "https://github.com/devdrg/test1.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devdrg/test1.git"
   },
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Dragos",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "concurrently": "^3.6.0",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "mongoose": "^5.2.0",
